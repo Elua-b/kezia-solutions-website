@@ -90,7 +90,7 @@ const jsonLd = {
     '@type': 'PostalAddress',
     addressCountry: 'RW',
   },
-  sameAs: [],
+  sameAs: ['https://www.linkedin.com/company/kezia-businesses/'],
 }
 
 export default function RootLayout({
