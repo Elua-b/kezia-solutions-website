@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, LinkedinIcon } from "lucide-react";
 import Logo from "./Logo";
+
+const LINKEDIN_URL = "https://www.linkedin.com/company/kezia-businesses/";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -37,6 +39,15 @@ const Header = () => {
             </a>
             <a href="mailto:info@keziaa.rw" className="flex items-center gap-1.5 hover:text-[#F5B700] transition-colors">
               <Mail className="w-3 h-3" /> info@keziaa.rw
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#F5B700] transition-colors"
+              aria-label="Keziaa Business Group on LinkedIn"
+            >
+              <LinkedinIcon className="w-3 h-3" />
             </a>
           </div>
         </div>
