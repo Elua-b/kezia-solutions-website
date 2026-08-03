@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, LinkedinIcon } from "lucide-react";
 import Logo from "./Logo";
+
+const LINKEDIN_URL = "https://www.linkedin.com/company/kezia-businesses/";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -122,6 +124,19 @@ const Footer = () => {
                   info@keziaa.rw
                 </a>
               </div>
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+              >
+                <span className="w-8 h-8 rounded-md bg-white/8 flex items-center justify-center group-hover:bg-[#F5B700] flex-shrink-0 transition-colors duration-300">
+                  <LinkedinIcon className="w-4 h-4 text-[#F5B700] group-hover:text-[#141414] transition-colors duration-300" />
+                </span>
+                <span className="text-[13px] text-white/50 group-hover:text-white transition-colors duration-300">
+                  LinkedIn
+                </span>
+              </a>
             </div>
           </div>
         </div>
