@@ -79,6 +79,7 @@ const reasons = [
 const platforms = [
   { name: "ChangeNOW", place: "Paris, France" },
   { name: "Emerging Valley", place: "Marseille, France" },
+  { name: "VivaTech", place: "Paris, France" },
   { name: "CES", place: "Las Vegas, USA" },
   { name: "Business Leaders Forum", place: "South Korea" },
   { name: "International Youth Fellowship", place: "Global Network" },
@@ -364,7 +365,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {platforms.map(({ name, place }) => (
               <div
                 key={name}

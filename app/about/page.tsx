@@ -35,6 +35,11 @@ const platforms = [
     body: "A platform connecting Africa and Europe through entrepreneurship, innovation, investment, and partnerships.",
   },
   {
+    name: "VivaTech",
+    place: "Paris, France",
+    body: "One of Europe's largest technology and innovation events, connecting startups, investors, and global business leaders.",
+  },
+  {
     name: "CES (Consumer Electronics Show)",
     place: "Las Vegas, United States",
     body: "A global technology platform showcasing innovation and emerging technologies.",
