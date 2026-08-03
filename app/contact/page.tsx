@@ -36,7 +36,7 @@ export default function Contact() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-[#0F1F3D] px-6 py-16 sm:py-20 text-center">
+      <section className="bg-[#141414] px-6 py-16 sm:py-20 text-center">
         <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700] mb-4 font-semibold">
           We'd Love to Hear From You
         </p>
@@ -56,38 +56,38 @@ export default function Contact() {
               <Card
                 key={label}
                 {...(href ? { href, target: href.startsWith("http") ? "_blank" : undefined, rel: href.startsWith("http") ? "noopener noreferrer" : undefined } : {})}
-                className={`group flex flex-col rounded-xl border border-[#0F1F3D]/8 p-7 transition-all duration-300 ${
+                className={`group flex flex-col rounded-xl border border-[#141414]/8 p-7 transition-all duration-300 ${
                   href ? "hover:border-[#F5B700] hover:shadow-lg" : ""
                 }`}
               >
-                <div className="w-12 h-12 rounded-lg bg-[#0F1F3D] flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-lg bg-[#141414] flex items-center justify-center mb-6">
                   <Icon className="w-5 h-5 text-[#F5B700]" />
                 </div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[11px] tracking-[0.2em] uppercase text-[#5B6B85] font-semibold">
+                  <span className="text-[11px] tracking-[0.2em] uppercase text-[#5C5C5C] font-semibold">
                     {label}
                   </span>
                   {href && (
-                    <ArrowUpRight className="w-4 h-4 text-[#0F1F3D]/30 group-hover:text-[#F5B700] transition-colors" />
+                    <ArrowUpRight className="w-4 h-4 text-[#141414]/30 group-hover:text-[#F5B700] transition-colors" />
                   )}
                 </div>
-                <span className="text-[15px] font-bold text-[#0F1F3D] leading-snug">{value}</span>
-                {value2 && <span className="text-[15px] font-bold text-[#0F1F3D] leading-snug">{value2}</span>}
+                <span className="text-[15px] font-bold text-[#141414] leading-snug">{value}</span>
+                {value2 && <span className="text-[15px] font-bold text-[#141414] leading-snug">{value2}</span>}
               </Card>
             );
           })}
         </div>
 
         {/* Note */}
-        <div className="mt-10 rounded-xl bg-[#F4F6FB] p-8 flex flex-col sm:flex-row items-center gap-6 justify-between">
-          <p className="text-sm text-[#5B6B85] leading-relaxed max-w-md">
+        <div className="mt-10 rounded-xl bg-[#F2F2F0] p-8 flex flex-col sm:flex-row items-center gap-6 justify-between">
+          <p className="text-sm text-[#5C5C5C] leading-relaxed max-w-md">
             Based in Rwanda, Keziaa Business Group connects entrepreneurs, investors, and
             organizations across Africa and the world. Email or call us directly and our team
             will follow up.
           </p>
           <a
             href="mailto:info@keziaa.rw"
-            className="flex-shrink-0 inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#0F1F3D] text-white px-8 py-4 rounded-md hover:bg-[#F5B700] hover:text-[#0F1F3D] transition-colors duration-300"
+            className="flex-shrink-0 inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#141414] text-white px-8 py-4 rounded-md hover:bg-[#F5B700] hover:text-[#141414] transition-colors duration-300"
           >
             Email Us
             <ArrowRight className="w-4 h-4" />
@@ -96,14 +96,14 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0A1730] px-6 py-16 sm:py-20 text-center">
+      <section className="bg-[#0A0A0A] px-6 py-16 sm:py-20 text-center">
         <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight mb-6 max-w-2xl mx-auto">
           Explore How We Can Work Together
         </h2>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/divisions"
-            className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-9 py-4 rounded-md hover:bg-white transition-colors duration-300"
+            className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-9 py-4 rounded-md hover:bg-white transition-colors duration-300"
           >
             View Our Divisions
           </Link>

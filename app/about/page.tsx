@@ -85,7 +85,7 @@ const partnerTypes = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white text-[#101828]">
+    <div className="min-h-screen bg-white text-[#171717]">
       <Header />
 
       {/* Hero */}
@@ -97,7 +97,7 @@ export default function About() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#0A1730]/85" />
+        <div className="absolute inset-0 bg-[#0A0A0A]/85" />
         <div className="relative z-10">
           <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700] mb-4 font-semibold">
             Who We Are
@@ -110,45 +110,45 @@ export default function About() {
 
       {/* Who We Are */}
       <section className="px-6 lg:px-10 py-16 sm:py-20 max-w-4xl mx-auto text-center">
-        <p className="text-[16px] text-[#5B6B85] leading-relaxed mb-4">
+        <p className="text-[16px] text-[#5C5C5C] leading-relaxed mb-4">
           Keziaa Business Group is an African diversified business group focused on connecting
           Africa with global opportunities through trade, investment, technology, innovation, and
           strategic partnerships.
         </p>
-        <p className="text-[16px] text-[#5B6B85] leading-relaxed mb-4">
+        <p className="text-[16px] text-[#5C5C5C] leading-relaxed mb-4">
           We support entrepreneurs, startups, companies, investors, and international
           organizations by creating connections between African markets and global business
           ecosystems. Through our different companies and business divisions, Keziaa works to
           facilitate market access, international partnerships, investment opportunities, and
           sustainable business growth.
         </p>
-        <p className="text-[16px] text-[#0F1F3D] font-semibold leading-relaxed">
+        <p className="text-[16px] text-[#141414] font-semibold leading-relaxed">
           Our vision is to become a trusted bridge connecting Africa with the world.
         </p>
       </section>
 
       {/* Vision & Mission */}
-      <section className="bg-[#F4F6FB] px-6 lg:px-10 py-16 sm:py-20">
+      <section className="bg-[#F2F2F0] px-6 lg:px-10 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="bg-white rounded-xl p-8 sm:p-10 border border-[#0F1F3D]/6">
-            <div className="w-12 h-12 rounded-lg bg-[#0F1F3D] flex items-center justify-center mb-6">
+          <div className="bg-white rounded-xl p-8 sm:p-10 border border-[#141414]/6">
+            <div className="w-12 h-12 rounded-lg bg-[#141414] flex items-center justify-center mb-6">
               <Eye className="w-5 h-5 text-[#F5B700]" />
             </div>
-            <h2 className="text-2xl font-black text-[#0F1F3D] mb-4">Vision</h2>
-            <p className="text-[15px] text-[#5B6B85] leading-relaxed">
+            <h2 className="text-2xl font-black text-[#141414] mb-4">Vision</h2>
+            <p className="text-[15px] text-[#5C5C5C] leading-relaxed">
               To become a leading African business platform connecting global companies,
               investors, technologies, and opportunities with African markets.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl p-8 sm:p-10 border border-[#0F1F3D]/6">
-            <div className="w-12 h-12 rounded-lg bg-[#0F1F3D] flex items-center justify-center mb-6">
+          <div className="bg-white rounded-xl p-8 sm:p-10 border border-[#141414]/6">
+            <div className="w-12 h-12 rounded-lg bg-[#141414] flex items-center justify-center mb-6">
               <Target className="w-5 h-5 text-[#F5B700]" />
             </div>
-            <h2 className="text-2xl font-black text-[#0F1F3D] mb-5">Mission</h2>
+            <h2 className="text-2xl font-black text-[#141414] mb-5">Mission</h2>
             <ul className="space-y-3">
               {mission.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[14px] text-[#5B6B85] leading-relaxed">
+                <li key={item} className="flex items-start gap-3 text-[14px] text-[#5C5C5C] leading-relaxed">
                   <CheckCircle2 className="w-4 h-4 text-[#F5B700] mt-0.5 flex-shrink-0" />
                   {item}
                 </li>
@@ -162,10 +162,10 @@ export default function About() {
       <section id="international-exposure" className="px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-[11px] tracking-[0.3em] uppercase text-[#0F1F3D]/45 mb-3 block">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-[#141414]/45 mb-3 block">
               International Exposure & Global Platforms
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0F1F3D] leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#141414] leading-tight">
               Engaged With Entrepreneurship, Innovation & Investment Networks
             </h2>
           </div>
@@ -181,17 +181,17 @@ export default function About() {
               </div>
             ))}
           </div>
-          <p className="text-[12px] text-[#5B6B85] text-center mb-14">
+          <p className="text-[12px] text-[#5C5C5C] text-center mb-14">
             Keziaa delegates at the Business Leaders Forum (BLF), South Korea.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {platforms.map(({ name, place, body }) => (
-              <div key={name} className="rounded-xl border border-[#0F1F3D]/8 p-7">
+              <div key={name} className="rounded-xl border border-[#141414]/8 p-7">
                 <Globe2 className="w-6 h-6 text-[#F5B700] mb-4" />
-                <h3 className="text-[15px] font-bold text-[#0F1F3D] mb-1 leading-snug">{name}</h3>
+                <h3 className="text-[15px] font-bold text-[#141414] mb-1 leading-snug">{name}</h3>
                 <p className="text-[11px] tracking-wide uppercase text-[#F5B700] font-semibold mb-3">{place}</p>
-                <p className="text-[13px] text-[#5B6B85] leading-relaxed">{body}</p>
+                <p className="text-[13px] text-[#5C5C5C] leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -199,23 +199,23 @@ export default function About() {
       </section>
 
       {/* Memberships */}
-      <section className="bg-[#F4F6FB] px-6 lg:px-10 py-16 sm:py-20">
+      <section className="bg-[#F2F2F0] px-6 lg:px-10 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-[11px] tracking-[0.3em] uppercase text-[#0F1F3D]/45 mb-3 block">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-[#141414]/45 mb-3 block">
               International Business Memberships
             </span>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0F1F3D] leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-[#141414] leading-tight">
               Connected With Global Business Communities
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {memberships.map(({ name, place, body }) => (
-              <div key={name} className="bg-white rounded-xl p-7 border border-[#0F1F3D]/6">
-                <h3 className="text-[15px] font-bold text-[#0F1F3D] mb-1 leading-snug">{name}</h3>
+              <div key={name} className="bg-white rounded-xl p-7 border border-[#141414]/6">
+                <h3 className="text-[15px] font-bold text-[#141414] mb-1 leading-snug">{name}</h3>
                 <p className="text-[11px] tracking-wide uppercase text-[#F5B700] font-semibold mb-3">{place}</p>
-                <p className="text-[13px] text-[#5B6B85] leading-relaxed">{body}</p>
+                <p className="text-[13px] text-[#5C5C5C] leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function About() {
       </section>
 
       {/* Why Partner */}
-      <section className="bg-[#0F1F3D] px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
+      <section className="bg-[#141414] px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-[11px] tracking-[0.3em] uppercase text-[#F5B700]/80 mb-3 block">
@@ -251,15 +251,15 @@ export default function About() {
       <section className="px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
-            <span className="text-[11px] tracking-[0.3em] uppercase text-[#0F1F3D]/45 mb-3 block">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-[#141414]/45 mb-3 block">
               Partnership Opportunities
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0F1F3D] leading-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#141414] leading-tight mb-6">
               Keziaa Welcomes Partnerships With
             </h2>
             <ul className="space-y-3">
               {partnerTypes.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[14px] text-[#5B6B85] leading-relaxed">
+                <li key={item} className="flex items-start gap-3 text-[14px] text-[#5C5C5C] leading-relaxed">
                   <CheckCircle2 className="w-4 h-4 text-[#F5B700] mt-0.5 flex-shrink-0" />
                   {item}
                 </li>
@@ -268,20 +268,20 @@ export default function About() {
           </div>
 
           <div>
-            <span className="text-[11px] tracking-[0.3em] uppercase text-[#0F1F3D]/45 mb-3 block">
+            <span className="text-[11px] tracking-[0.3em] uppercase text-[#141414]/45 mb-3 block">
               Our Commitment
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#0F1F3D] leading-tight mb-6">
+            <h2 className="text-2xl sm:text-3xl font-black text-[#141414] leading-tight mb-6">
               Accelerating Africa's Growth
             </h2>
-            <p className="text-[14px] text-[#5B6B85] leading-relaxed mb-6">
+            <p className="text-[14px] text-[#5C5C5C] leading-relaxed mb-6">
               Keziaa Business Group believes that Africa's growth will be accelerated through
               strong partnerships, innovation, investment, technology exchange, and international
               collaboration. We are committed to building bridges between Africa and the world.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#0F1F3D] text-white px-8 py-4 rounded-md hover:bg-[#F5B700] hover:text-[#0F1F3D] transition-colors duration-300"
+              className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#141414] text-white px-8 py-4 rounded-md hover:bg-[#F5B700] hover:text-[#141414] transition-colors duration-300"
             >
               Partner With Us
               <ArrowRight className="w-4 h-4" />

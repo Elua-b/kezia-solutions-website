@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <>
       {/* Top utility bar */}
-      <div className="hidden sm:block bg-[#0F1F3D] text-white/70">
+      <div className="hidden sm:block bg-[#141414] text-white/70">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-9 flex items-center justify-between text-[11px]">
           <span className="tracking-wide">Connecting Africa with Global Business Opportunities</span>
           <div className="flex items-center gap-6">
@@ -45,7 +45,7 @@ const Header = () => {
       {/* Main nav */}
       <header
         className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
-          scrolled ? "shadow-md" : "border-b border-[#0F1F3D]/8"
+          scrolled ? "shadow-md" : "border-b border-[#141414]/8"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -62,7 +62,7 @@ const Header = () => {
                     key={href}
                     href={href}
                     className={`text-[13px] font-semibold tracking-wide transition-colors relative pb-1 ${
-                      active ? "text-[#0F1F3D]" : "text-[#0F1F3D]/60 hover:text-[#0F1F3D]"
+                      active ? "text-[#141414]" : "text-[#141414]/60 hover:text-[#141414]"
                     }`}
                   >
                     {label}
@@ -75,7 +75,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center">
               <Link
                 href="/contact"
-                className="text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-6 py-3 rounded-md hover:bg-[#0F1F3D] hover:text-white transition-colors duration-300"
+                className="text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-6 py-3 rounded-md hover:bg-[#141414] hover:text-white transition-colors duration-300"
               >
                 Get In Touch
               </Link>
@@ -83,7 +83,7 @@ const Header = () => {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2 text-[#0F1F3D]"
+              className="lg:hidden p-2 text-[#141414]"
               aria-label="Open menu"
             >
               <Menu className="w-6 h-6" />
@@ -98,15 +98,15 @@ const Header = () => {
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute inset-0 bg-[#0F1F3D]/60" onClick={() => setMobileOpen(false)} />
+        <div className="absolute inset-0 bg-[#141414]/60" onClick={() => setMobileOpen(false)} />
         <div
           className={`absolute top-0 right-0 h-full w-72 bg-white shadow-2xl transition-transform duration-400 ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between px-6 h-16 border-b border-[#0F1F3D]/8">
+          <div className="flex items-center justify-between px-6 h-16 border-b border-[#141414]/8">
             <Logo size="sm" />
-            <button onClick={() => setMobileOpen(false)} className="text-[#0F1F3D] p-1">
+            <button onClick={() => setMobileOpen(false)} className="text-[#141414] p-1">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -116,8 +116,8 @@ const Header = () => {
                 key={href}
                 href={href}
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm font-semibold py-3 border-b border-[#0F1F3D]/8 ${
-                  pathname === href ? "text-[#0F1F3D]" : "text-[#0F1F3D]/60"
+                className={`text-sm font-semibold py-3 border-b border-[#141414]/8 ${
+                  pathname === href ? "text-[#141414]" : "text-[#141414]/60"
                 }`}
               >
                 {label}
@@ -127,7 +127,7 @@ const Header = () => {
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="text-center text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-6 py-3.5 rounded-md"
+                className="text-center text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-6 py-3.5 rounded-md"
               >
                 Get In Touch
               </Link>

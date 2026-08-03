@@ -136,11 +136,11 @@ const divisions = [
 
 export default function Divisions() {
   return (
-    <div className="min-h-screen bg-white text-[#101828]">
+    <div className="min-h-screen bg-white text-[#171717]">
       <Header />
 
       {/* Hero */}
-      <section className="bg-[#0F1F3D] px-6 py-20 sm:py-24 text-center">
+      <section className="bg-[#141414] px-6 py-20 sm:py-24 text-center">
         <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700] mb-4 font-semibold">
           Our Business Divisions
         </p>
@@ -161,34 +161,34 @@ export default function Divisions() {
             <div
               key={id}
               id={id}
-              className="scroll-mt-24 rounded-2xl border border-[#0F1F3D]/8 p-8 sm:p-10 bg-white hover:shadow-xl transition-shadow duration-300"
+              className="scroll-mt-24 rounded-2xl border border-[#141414]/8 p-8 sm:p-10 bg-white hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-start gap-5 mb-6">
-                <div className="w-14 h-14 rounded-xl bg-[#0F1F3D] flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 rounded-xl bg-[#141414] flex items-center justify-center flex-shrink-0">
                   <Icon className="w-6 h-6 text-[#F5B700]" />
                 </div>
                 <div>
                   <span className="text-[10px] tracking-[0.25em] uppercase text-[#F5B700] font-bold mb-1 block">
                     Division {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-black text-[#0F1F3D] leading-tight">{name}</h2>
-                  <p className="text-[13px] text-[#5B6B85] mt-1">{tag}</p>
+                  <h2 className="text-2xl sm:text-3xl font-black text-[#141414] leading-tight">{name}</h2>
+                  <p className="text-[13px] text-[#5C5C5C] mt-1">{tag}</p>
                 </div>
               </div>
 
-              <p className="text-[15px] text-[#5B6B85] leading-relaxed mb-6">{intro}</p>
+              <p className="text-[15px] text-[#5C5C5C] leading-relaxed mb-6">{intro}</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 {points.map((point) => (
                   <div key={point} className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-[#F5B700] mt-0.5 flex-shrink-0" />
-                    <span className="text-[13.5px] text-[#5B6B85] leading-relaxed">{point}</span>
+                    <span className="text-[13.5px] text-[#5C5C5C] leading-relaxed">{point}</span>
                   </div>
                 ))}
               </div>
 
               {closing && (
-                <p className="text-[13.5px] text-[#0F1F3D] font-semibold leading-relaxed border-t border-[#0F1F3D]/8 pt-5">
+                <p className="text-[13.5px] text-[#141414] font-semibold leading-relaxed border-t border-[#141414]/8 pt-5">
                   {closing}
                 </p>
               )}
@@ -198,13 +198,13 @@ export default function Divisions() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0A1730] px-6 py-16 sm:py-20 text-center">
+      <section className="bg-[#0A0A0A] px-6 py-16 sm:py-20 text-center">
         <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight mb-6 max-w-2xl mx-auto">
           Interested in Partnering With One of Our Divisions?
         </h2>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-9 py-4 rounded-md hover:bg-white transition-colors duration-300"
+          className="inline-flex items-center gap-3 text-[13px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-9 py-4 rounded-md hover:bg-white transition-colors duration-300"
         >
           Contact Us
           <ArrowRight className="w-4 h-4" />

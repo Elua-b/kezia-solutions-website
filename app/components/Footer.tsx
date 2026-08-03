@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer>
       {/* Pre-footer CTA */}
-      <div className="bg-[#0A1730] px-6 lg:px-20 py-16">
+      <div className="bg-[#0A0A0A] px-6 lg:px-20 py-16">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
             <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700]/70 mb-3">
@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
             <Link
               href="/contact"
-              className="text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-8 py-4 rounded-md hover:bg-white transition-colors duration-300 text-center"
+              className="text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-8 py-4 rounded-md hover:bg-white transition-colors duration-300 text-center"
             >
               Partner With Us
             </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
       </div>
 
       {/* Main footer */}
-      <div className="bg-[#0F1F3D] px-6 lg:px-20 pt-14 pb-10">
+      <div className="bg-[#141414] px-6 lg:px-20 pt-14 pb-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           {/* Brand */}
           <div>

@@ -82,13 +82,13 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F4F6FB]">
-      <header className="bg-white border-b border-[#0F1F3D]/8">
+    <div className="min-h-screen bg-[#F2F2F0]">
+      <header className="bg-white border-b border-[#141414]/8">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Logo size="sm" />
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide text-[#0F1F3D]/60 hover:text-[#0F1F3D] transition-colors"
+            className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide text-[#141414]/60 hover:text-[#141414] transition-colors"
           >
             <LogOut className="w-4 h-4" />
             Log Out
@@ -98,41 +98,41 @@ export default function AdminDashboard() {
 
       <main className="max-w-6xl mx-auto px-6 py-12">
         <div className="mb-10">
-          <h1 className="text-2xl font-black text-[#0F1F3D] mb-1">Flyers</h1>
-          <p className="text-sm text-[#5B6B85]">
+          <h1 className="text-2xl font-black text-[#141414] mb-1">Flyers</h1>
+          <p className="text-sm text-[#5C5C5C]">
             Upload an event flyer and its image will appear as a card below the homepage hero.
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-xl border border-[#0F1F3D]/8 p-6 sm:p-8 mb-10 grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] gap-4 items-end"
+          className="bg-white rounded-xl border border-[#141414]/8 p-6 sm:p-8 mb-10 grid grid-cols-1 sm:grid-cols-[1fr_auto_auto] gap-4 items-end"
         >
           <div>
-            <label className="block text-[11px] font-semibold text-[#5B6B85] mb-1.5">Event Name</label>
+            <label className="block text-[11px] font-semibold text-[#5C5C5C] mb-1.5">Event Name</label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="e.g. Korea–Africa Investment Forum 2026"
-              className="w-full px-4 py-3 border border-[#0F1F3D]/12 rounded-md text-sm text-[#101828] focus:outline-none focus:border-[#0F1F3D]"
+              className="w-full px-4 py-3 border border-[#141414]/12 rounded-md text-sm text-[#171717] focus:outline-none focus:border-[#141414]"
             />
           </div>
 
           <div>
-            <label className="block text-[11px] font-semibold text-[#5B6B85] mb-1.5">Image</label>
+            <label className="block text-[11px] font-semibold text-[#5C5C5C] mb-1.5">Image</label>
             <input
               type="file"
               accept="image/*"
               onChange={(e) => setFile(e.target.files?.[0] || null)}
-              className="text-sm text-[#5B6B85] file:mr-3 file:px-4 file:py-2 file:rounded-md file:border-0 file:bg-[#F4F6FB] file:text-[#0F1F3D] file:font-semibold file:text-xs"
+              className="text-sm text-[#5C5C5C] file:mr-3 file:px-4 file:py-2 file:rounded-md file:border-0 file:bg-[#F2F2F0] file:text-[#141414] file:font-semibold file:text-xs"
             />
           </div>
 
           <button
             type="submit"
             disabled={uploading}
-            className="inline-flex items-center justify-center gap-2 text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#0F1F3D] px-6 py-3.5 rounded-md hover:bg-[#0F1F3D] hover:text-white transition-colors disabled:opacity-60"
+            className="inline-flex items-center justify-center gap-2 text-[12px] font-bold uppercase tracking-wide bg-[#F5B700] text-[#141414] px-6 py-3.5 rounded-md hover:bg-[#141414] hover:text-white transition-colors disabled:opacity-60"
           >
             {uploading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
             {uploading ? "Uploading…" : "Upload Flyer"}
@@ -144,18 +144,18 @@ export default function AdminDashboard() {
         )}
 
         {loading ? (
-          <div className="flex items-center justify-center py-24 text-[#5B6B85]">
+          <div className="flex items-center justify-center py-24 text-[#5C5C5C]">
             <Loader2 className="w-5 h-5 animate-spin mr-2" /> Loading flyers…
           </div>
         ) : fliers.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-24 text-[#5B6B85] border border-dashed border-[#0F1F3D]/15 rounded-2xl">
-            <ImageOff className="w-8 h-8 mb-3 text-[#0F1F3D]/25" />
+          <div className="flex flex-col items-center justify-center py-24 text-[#5C5C5C] border border-dashed border-[#141414]/15 rounded-2xl">
+            <ImageOff className="w-8 h-8 mb-3 text-[#141414]/25" />
             <p className="text-sm">No flyers uploaded yet.</p>
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
             {fliers.map((flier) => (
-              <div key={flier.id} className="group relative rounded-xl overflow-hidden border border-[#0F1F3D]/8 bg-white">
+              <div key={flier.id} className="group relative rounded-xl overflow-hidden border border-[#141414]/8 bg-white">
                 <div className="relative aspect-[3/4]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -165,12 +165,12 @@ export default function AdminDashboard() {
                   />
                 </div>
                 {flier.title && (
-                  <p className="px-3 py-2 text-[12px] font-semibold text-[#0F1F3D] truncate">{flier.title}</p>
+                  <p className="px-3 py-2 text-[12px] font-semibold text-[#141414] truncate">{flier.title}</p>
                 )}
                 <button
                   onClick={() => handleDelete(flier.id)}
                   disabled={deletingId === flier.id}
-                  className="absolute top-2 right-2 w-9 h-9 rounded-full bg-[#0A1730]/70 hover:bg-red-600 flex items-center justify-center text-white transition-colors disabled:opacity-60"
+                  className="absolute top-2 right-2 w-9 h-9 rounded-full bg-[#0A0A0A]/70 hover:bg-red-600 flex items-center justify-center text-white transition-colors disabled:opacity-60"
                   aria-label="Delete flyer"
                 >
                   {deletingId === flier.id ? (
