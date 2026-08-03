@@ -15,6 +15,11 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// The flyers grid reads from the DB on every request — without this, Next
+// prerenders "/" once at build time and production would keep serving that
+// frozen snapshot until the next deploy, never showing newly uploaded flyers.
+export const dynamic = "force-dynamic";
+
 const heroFeatures = [
   {
     icon: Briefcase,
