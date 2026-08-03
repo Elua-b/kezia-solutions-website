@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { sql, ensureFliersTable } from "../lib/db";
 import {
   Briefcase,
   TrendingUp,
@@ -84,21 +86,45 @@ const stats = [
   { value: "4", label: "Continents Reached" },
 ];
 
-export default function Home() {
+async function getFliers() {
+  try {
+    await ensureFliersTable();
+    const rows = await sql`
+      SELECT id, title, image_url FROM fliers
+      WHERE image_url IS NOT NULL
+      ORDER BY created_at DESC
+    `;
+    return rows as { id: number; title: string | null; image_url: string }[];
+  } catch {
+    return [];
+  }
+}
+
+export default async function Home() {
+  const fliers = await getFliers();
+
   return (
     <div className="min-h-screen bg-white text-[#101828]">
       <Header />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative bg-[#0F1F3D] pt-16 sm:pt-20 lg:pt-28 pb-40 sm:pb-48 lg:pb-56 px-6 lg:px-10 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 lg:pt-28 pb-40 sm:pb-48 lg:pb-56 px-6 lg:px-10 overflow-hidden">
+        <Image
+          src="/images/keziaa-blf-korea-group-photo.jpg"
+          alt="Keziaa Business Group delegation at the Business Leaders Forum, South Korea"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0A1730]/88" />
         <div
-          className="absolute inset-0 opacity-[0.07]"
+          className="absolute inset-0 opacity-[0.12]"
           style={{
             backgroundImage:
               "radial-gradient(circle at 20% 20%, #F5B700 0%, transparent 40%), radial-gradient(circle at 80% 60%, #F5B700 0%, transparent 45%)",
           }}
         />
-        <div className="relative max-w-4xl mx-auto text-center">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <p className="text-[12px] tracking-[0.35em] uppercase text-[#F5B700] mb-6 font-semibold">
             Keziaa Business Group
           </p>
@@ -127,7 +153,7 @@ export default function Home() {
         </div>
 
         {/* Floating feature strip */}
-        <div className="relative max-w-6xl mx-auto mt-16 lg:mt-20 -mb-64 sm:-mb-72 lg:-mb-32">
+        <div className="relative z-10 max-w-6xl mx-auto mt-16 lg:mt-20 -mb-64 sm:-mb-72 lg:-mb-32">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 bg-white rounded-2xl shadow-2xl shadow-black/20 p-6 sm:p-8">
             {heroFeatures.map(({ icon: Icon, title, body }) => (
               <div key={title} className="flex flex-col sm:flex-row gap-4 px-2">
@@ -146,6 +172,41 @@ export default function Home() {
 
       {/* spacer to clear the floating strip */}
       <div className="h-64 sm:h-72 lg:h-28" />
+
+      {/* ── FLIERS ───────────────────────────────────────────────── */}
+      {fliers.length > 0 && (
+        <section className="px-6 lg:px-10 py-16 sm:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-[11px] tracking-[0.3em] uppercase text-[#0F1F3D]/45 mb-3 block">
+                Latest Updates
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-[#0F1F3D] leading-tight">
+                Flyers & Announcements
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+              {fliers.map(({ id, title, image_url }) => (
+                <div key={id} className="rounded-xl overflow-hidden shadow-sm border border-[#0F1F3D]/8 bg-white">
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src={image_url}
+                      alt={title || "Keziaa Business Group flyer"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {title && (
+                    <p className="px-3 py-2.5 text-[12px] font-semibold text-[#0F1F3D] text-center truncate">
+                      {title}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── WHO WE ARE ───────────────────────────────────────────── */}
       <section className="px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
@@ -279,6 +340,24 @@ export default function Home() {
             >
               Learn More
             </Link>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96 mb-10">
+            <Image
+              src="/images/keziaa-blf-korea-presentation-2.jpg"
+              alt="Keziaa delegates at the Business Leaders Forum, South Korea"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A1730]/85 via-[#0A1730]/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-[#F5B700] font-bold mb-2 block">
+                Business Leaders Forum
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
+                Keziaa Delegates Engaging With Global Partners in South Korea
+              </h3>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">

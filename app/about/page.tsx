@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Target,
   Eye,
@@ -88,13 +89,23 @@ export default function About() {
       <Header />
 
       {/* Hero */}
-      <section className="bg-[#0F1F3D] px-6 py-20 sm:py-24 text-center">
-        <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700] mb-4 font-semibold">
-          Who We Are
-        </p>
-        <h1 className="text-4xl sm:text-5xl font-black text-white leading-tight max-w-3xl mx-auto">
-          A Trusted Bridge Between Africa and the World
-        </h1>
+      <section className="relative px-6 py-20 sm:py-24 text-center overflow-hidden">
+        <Image
+          src="/images/keziaa-blf-korea-presentation-1.jpg"
+          alt="Keziaa Business Group at an international business forum"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0A1730]/85" />
+        <div className="relative z-10">
+          <p className="text-[11px] tracking-[0.35em] uppercase text-[#F5B700] mb-4 font-semibold">
+            Who We Are
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-black text-white leading-tight max-w-3xl mx-auto">
+            A Trusted Bridge Between Africa and the World
+          </h1>
+        </div>
       </section>
 
       {/* Who We Are */}
@@ -158,6 +169,21 @@ export default function About() {
               Engaged With Entrepreneurship, Innovation & Investment Networks
             </h2>
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            {[
+              { src: "/images/keziaa-blf-korea-roundtable-1.jpg", alt: "Keziaa delegates in a roundtable session at the Business Leaders Forum, South Korea" },
+              { src: "/images/keziaa-blf-korea-roundtable-2.jpg", alt: "Keziaa delegates networking at the Business Leaders Forum, South Korea" },
+              { src: "/images/keziaa-blf-korea-delegation.jpg", alt: "Keziaa delegation touring an exhibit in South Korea" },
+            ].map(({ src, alt }) => (
+              <div key={src} className="relative h-48 sm:h-56 rounded-xl overflow-hidden">
+                <Image src={src} alt={alt} fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+          <p className="text-[12px] text-[#5B6B85] text-center mb-14">
+            Keziaa delegates at the Business Leaders Forum (BLF), South Korea.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {platforms.map(({ name, place, body }) => (

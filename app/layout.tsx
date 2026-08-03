@@ -45,12 +45,21 @@ export const metadata: Metadata = {
     title: 'Keziaa Business Group | Connecting Africa with Global Business Opportunities',
     description:
       'An African diversified business group connecting Africa with global trade, investment, technology, and strategic partnerships.',
+    images: [
+      {
+        url: '/images/keziaa-blf-korea-group-photo.jpg',
+        width: 1000,
+        height: 563,
+        alt: 'Keziaa Business Group delegation at the Business Leaders Forum, South Korea',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Keziaa Business Group | Connecting Africa with Global Business Opportunities',
     description:
       'An African diversified business group connecting Africa with global trade, investment, technology, and strategic partnerships.',
+    images: ['/images/keziaa-blf-korea-group-photo.jpg'],
   },
   robots: {
     index: true,
